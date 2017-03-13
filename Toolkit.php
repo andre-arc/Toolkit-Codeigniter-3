@@ -8,6 +8,15 @@ class Toolkit extends CI_Controller {
     protected $filename ="";
     protected $module_name="";
 
+    public function index(){
+        echo PHP_EOL;
+        echo "-- Toolkit CodeIgniter 3 Ver 1.0 --" . PHP_EOL;
+        echo "___________________________________" . PHP_EOL;
+        echo PHP_EOL;
+        echo "add_module(<nama_module>) \t: untuk menambah module" . PHP_EOL;
+        echo "remove_module(<nama_module>) \t: untuk menghapus module" . PHP_EOL;
+    }
+
     //generator Modules
     public function add_module($module_name){
         $this->controller(ucfirst($module_name."_controller"), $module_name);
